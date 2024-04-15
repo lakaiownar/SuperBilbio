@@ -1,9 +1,11 @@
-package edu.colval.exercises.td60;
+package edu.colval.exercises.td60.bll.services;
 
 import edu.colval.exercises.td60.bll.model.Livre;
 import edu.colval.exercises.td60.dal.Repository_Livre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class Service_Livre {
@@ -18,8 +20,18 @@ public class Service_Livre {
         this.repositoryLivre = repositoryLivre;
     }
 
-    public boolean saveLivre(Livre livre) {
+    public void save(Livre livre) {
         repositoryLivre.save(livre);
-        return true;
+    }
+
+    public Livre findById(int id) {
+        return repositoryLivre.findById(id).orElse(null);
+    }
+    public List<Livre> findLivreByTitreOrderByTitreAsc(String name) {
+        return repositoryLivre.findLivreByTitreOrderByTitreAsc(name);
+    }
+
+    public Livre findLivreByTitre (String titre) {
+        return repositoryLivre.findLivreByTitre(titre);
     }
 }

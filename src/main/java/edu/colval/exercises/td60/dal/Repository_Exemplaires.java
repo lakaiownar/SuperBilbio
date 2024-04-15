@@ -1,2 +1,9 @@
-package edu.colval.exercises.td60.dal;public interface Repository_Exemplaires {
+package edu.colval.exercises.td60.dal;
+
+import edu.colval.exercises.td60.bll.model.Exemplaires;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface Repository_Exemplaires extends JpaRepository<Exemplaires, Integer> {
 }

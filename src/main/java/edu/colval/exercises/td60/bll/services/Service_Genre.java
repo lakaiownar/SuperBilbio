@@ -1,4 +1,4 @@
-package edu.colval.exercises.td60;
+package edu.colval.exercises.td60.bll.services;
 
 import edu.colval.exercises.td60.bll.model.Genre;
 import edu.colval.exercises.td60.dal.Repository_Genre;
@@ -18,8 +18,7 @@ public class Service_Genre {
         this.repositoryGenre = repositoryGenre;
     }
 
-    public boolean saveGenre(Genre genre) {
+    public void save(Genre genre) {
         repositoryGenre.save(genre);
-        return true;
     }
 }

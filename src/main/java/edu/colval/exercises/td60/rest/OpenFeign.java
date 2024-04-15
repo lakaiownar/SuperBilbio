@@ -1,4 +1,4 @@
-package edu.colval.exercises.td60.rest.openfeign;
+package edu.colval.exercises.td60.rest;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

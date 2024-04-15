@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-public class ServiceTests {
+public class TD6Tests {
 
     @Autowired
     private Service_Livre livreService;
@@ -66,15 +66,11 @@ public class ServiceTests {
         livre2.setAuteur(auteurService.getRepositoryAuteur().findAll().get(0));
         livre2.setGenre(genreService.getRepositoryGenre().findAll().get(0));
 //        livreService.getRepositoryLivre().save(livre2);
-        // Print the new book
-        System.out.println("Livre: " + livre2.getTitre() + " " + livre2.getAuteur().getName() + " " + livre2.getGenre().getNom());
 
         // Create a new Auteur
         Auteur auteur2 = new Auteur();
         auteur2.setName("Test");
         auteur2.setLastname("Test");
-        //auteurService.getRepositoryAuteur().save(auteur2);
-        // Print the new auteur
-        System.out.println("Auteur: " + auteur2.getName() + " " + auteur2.getLastname());
+//        auteurService.getRepositoryAuteur().save(auteur2);
     }
 }

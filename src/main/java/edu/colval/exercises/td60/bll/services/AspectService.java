@@ -3,7 +3,7 @@ package edu.colval.exercises.td60.bll.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TestService {
+public class AspectService {
 
     public void testMethod() {
         // Simulate a time-consuming task

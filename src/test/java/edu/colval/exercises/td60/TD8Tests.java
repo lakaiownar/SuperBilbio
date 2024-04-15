@@ -1,4 +1,4 @@
-package edu.colval.exercises.td60.controllers;
+package edu.colval.exercises.td60;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.colval.exercises.td60.bll.model.Utilisateurs;
@@ -15,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ExceptionHandlingController {
+public class TD8Tests {
 
     @Autowired
     private MockMvc mockMvc;
@@ -35,9 +35,9 @@ public class ExceptionHandlingController {
 
         String json = objectMapper.writeValueAsString(utilisateur);
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/utilisateurs")
+        mockMvc.perform(post("/utilisateurs")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(json))
-                .andExpect(MockMvcResultMatchers.status().isCreated());
+                .andExpect(status().isCreated());
     }
 }

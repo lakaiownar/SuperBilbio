@@ -1,4 +1,4 @@
-package edu.colval.exercises.td60.bll.model;
+package edu.colval.exercises.td60.bll.validation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
