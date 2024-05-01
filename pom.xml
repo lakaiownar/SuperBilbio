@@ -14,7 +14,7 @@
 	<name>TD-60</name>
 	<description>TD-60</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
