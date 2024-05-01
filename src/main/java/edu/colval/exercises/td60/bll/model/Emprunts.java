@@ -2,7 +2,6 @@ package edu.colval.exercises.td60.bll.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
 
 import java.sql.Date;
 
